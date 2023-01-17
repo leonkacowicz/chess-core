@@ -1,0 +1,8 @@
+.idea
+build
+cmake-build-*
+runtest
+out
+!CMakeLists.txt
+!doc/*
+*.csv
