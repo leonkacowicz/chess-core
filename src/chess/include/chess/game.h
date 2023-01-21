@@ -1,5 +1,5 @@
-#ifndef CHESSENGINE_GAME_H
-#define CHESSENGINE_GAME_H
+#ifndef CHESSTOOLS_CHESSCORE_GAME_H
+#define CHESSTOOLS_CHESSCORE_GAME_H
 
 
 #include <string>
@@ -52,4 +52,4 @@ namespace chess::core {
 }
 
 
-#endif //CHESSENGINE_GAME_H
+#endif //CHESSTOOLS_CHESSCORE_GAME_H

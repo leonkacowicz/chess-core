@@ -2,8 +2,8 @@
 // Created by leon on 2019-11-16.
 //
 
-#ifndef CHESSENGINE_CORE_H
-#define CHESSENGINE_CORE_H
+#ifndef CHESSTOOLS_CHESSCORE_CORE_H
+#define CHESSTOOLS_CHESSCORE_CORE_H
 
 
 namespace chess::core {
@@ -24,4 +24,4 @@ constexpr color opposite(color c) {
 
 }
 
-#endif //CHESSENGINE_CORE_H
+#endif //CHESSTOOLS_CHESSCORE_CORE_H

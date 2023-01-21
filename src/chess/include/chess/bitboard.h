@@ -1,5 +1,5 @@
-#ifndef CHESSENGINE_BITBOARD_H
-#define CHESSENGINE_BITBOARD_H
+#ifndef CHESSTOOLS_CHESSCORE_BITBOARD_H
+#define CHESSTOOLS_CHESSCORE_BITBOARD_H
 
 #include <cassert>
 #include <cstdint>
@@ -193,4 +193,4 @@ constexpr bitboard operator&(bitboard b, square s) {
 }
 
 
-#endif //CHESSENGINE_BITBOARD_H
+#endif //CHESSTOOLS_CHESSCORE_BITBOARD_H

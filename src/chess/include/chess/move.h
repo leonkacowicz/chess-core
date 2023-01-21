@@ -1,5 +1,5 @@
-#ifndef CHESSENGINE_MOVE_H
-#define CHESSENGINE_MOVE_H
+#ifndef CHESSTOOLS_CHESSCORE_MOVE_H
+#define CHESSTOOLS_CHESSCORE_MOVE_H
 
 #include <cassert>
 #include <string>
@@ -65,4 +65,4 @@ inline std::string to_long_move(move m) {
 }
 
 }
-#endif //CHESSENGINE_MOVE_H
+#endif //CHESSTOOLS_CHESSCORE_MOVE_H

@@ -1,5 +1,5 @@
-#ifndef CHESSENGINE_SQUARE_H
-#define CHESSENGINE_SQUARE_H
+#ifndef CHESSTOOLS_CHESSCORE_SQUARE_H
+#define CHESSTOOLS_CHESSCORE_SQUARE_H
 
 #include <string>
 #include <iostream>
@@ -70,4 +70,4 @@ namespace chess::core {
     }
 }
 
-#endif //CHESSENGINE_SQUARE_H
+#endif //CHESSTOOLS_CHESSCORE_SQUARE_H

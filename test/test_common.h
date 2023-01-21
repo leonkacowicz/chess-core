@@ -1,5 +1,5 @@
-#ifndef CHESSENGINE_TEST_COMMON_H
-#define CHESSENGINE_TEST_COMMON_H
+#ifndef CHESSTOOLS_CHESSCORE_TEST_COMMON_H
+#define CHESSTOOLS_CHESSCORE_TEST_COMMON_H
 #include <gtest/gtest.h>
 #include <random>
 

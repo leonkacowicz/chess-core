@@ -2,8 +2,8 @@
 // Created by leon on 2019-07-29.
 //
 
-#ifndef CHESSENGINE_FEN_H
-#define CHESSENGINE_FEN_H
+#ifndef CHESSTOOLS_CHESSCORE_FEN_H
+#define CHESSTOOLS_CHESSCORE_FEN_H
 
 
 #include <chess/board.h>
@@ -26,4 +26,4 @@ namespace chess::core::fen {
 }
 
 
-#endif //CHESSENGINE_FEN_H
+#endif //CHESSTOOLS_CHESSCORE_FEN_H

@@ -2,8 +2,8 @@
 // Created by leon on 2019-08-05.
 //
 
-#ifndef CHESSENGINE_MAGIC_BITBOARD_H
-#define CHESSENGINE_MAGIC_BITBOARD_H
+#ifndef CHESSTOOLS_CHESSCORE_MAGIC_BITBOARD_H
+#define CHESSTOOLS_CHESSCORE_MAGIC_BITBOARD_H
 
 #include <chess/bitboard.h>
 
@@ -37,4 +37,4 @@ namespace chess {
     }
 }
 
-#endif //CHESSENGINE_MAGIC_BITBOARD_H
+#endif //CHESSTOOLS_CHESSCORE_MAGIC_BITBOARD_H

@@ -2,8 +2,8 @@
 // Created by leon on 2019-07-30.
 //
 
-#ifndef CHESSENGINE_ZOBRIST_H
-#define CHESSENGINE_ZOBRIST_H
+#ifndef CHESSTOOLS_CHESSCORE_ZOBRIST_H
+#define CHESSTOOLS_CHESSCORE_ZOBRIST_H
 
 #include <chess/board.h>
 
@@ -20,4 +20,4 @@ namespace chess::core::zobrist {
 }
 
 
-#endif //CHESSENGINE_ZOBRIST_H
+#endif //CHESSTOOLS_CHESSCORE_ZOBRIST_H

@@ -1,5 +1,5 @@
-#ifndef CHESSENGINE_BOARD_H
-#define CHESSENGINE_BOARD_H
+#ifndef CHESSTOOLS_CHESSCORE_BOARD_H
+#define CHESSTOOLS_CHESSCORE_BOARD_H
 
 #include <vector>
 #include "core.h"
@@ -65,4 +65,4 @@ public:
     board flip_colors() const;
 };
 }
-#endif //CHESSENGINE_BOARD_H
+#endif //CHESSTOOLS_CHESSCORE_BOARD_H

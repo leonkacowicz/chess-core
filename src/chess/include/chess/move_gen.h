@@ -2,8 +2,8 @@
 // Created by leon on 2019-08-03.
 //
 
-#ifndef CHESSENGINE_MOVE_GEN_H
-#define CHESSENGINE_MOVE_GEN_H
+#ifndef CHESSTOOLS_CHESSCORE_MOVE_GEN_H
+#define CHESSTOOLS_CHESSCORE_MOVE_GEN_H
 
 #include <cassert>
 #include "board.h"
@@ -70,4 +70,4 @@ public:
 };
 }
 
-#endif //CHESSENGINE_MOVE_GEN_H
+#endif //CHESSTOOLS_CHESSCORE_MOVE_GEN_H
