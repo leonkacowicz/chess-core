@@ -65,28 +65,17 @@ std::string fen::to_string(const board& b, int full_move_counter) {
 }
 
 board fen::board_from_fen(const std::string& fen) {
+    return fen::board_from_fen_parts(fen::extract_fen_parts(fen));
+}
+
+board fen::board_from_fen_parts(const fen_parts& parts) {
     board b;
     using std::string;
     using std::stringstream;
 
-    std::stringstream ss(fen);
-    std::string pieces;
-    std::string side_to_move;
-    std::string castling;
-    std::string enpassant;
-    std::string half_move_clock;
-    std::string full_move_counter;
-
-    getline(ss, pieces, ' ');
-    getline(ss, side_to_move, ' ');
-    getline(ss, castling, ' ');
-    getline(ss, enpassant, ' ');
-    getline(ss, half_move_clock, ' ');
-    getline(ss, full_move_counter, ' ');
-
     int r = 7;
     int f = 0;
-    for (char ch : pieces) {
+    for (char ch : parts.pieces) {
         bitboard sq = file[f] & rank[r];
         if (ch == '/') {
             r--;
@@ -110,17 +99,30 @@ board fen::board_from_fen(const std::string& fen) {
         f++;
     }
 
-    b.side_to_play = side_to_move == "b" ? BLACK : WHITE;
+    b.side_to_play = parts.side_to_move == "b" ? BLACK : WHITE;
 
-    b.can_castle_king_side[WHITE] = castling.find('K', 0) != std::string::npos;
-    b.can_castle_queen_side[WHITE] = castling.find('Q', 0) != std::string::npos;;
-    b.can_castle_king_side[BLACK] = castling.find('k', 0) != std::string::npos;;
-    b.can_castle_queen_side[BLACK] = castling.find('q', 0) != std::string::npos;;
+    b.can_castle_king_side[WHITE] = parts.castling.find('K', 0) != std::string::npos;
+    b.can_castle_queen_side[WHITE] = parts.castling.find('Q', 0) != std::string::npos;;
+    b.can_castle_king_side[BLACK] = parts.castling.find('k', 0) != std::string::npos;;
+    b.can_castle_queen_side[BLACK] = parts.castling.find('q', 0) != std::string::npos;;
 
-    b.en_passant = enpassant == "-" ? SQ_NONE : get_square(enpassant.c_str());
+    b.en_passant = parts.enpassant == "-" ? SQ_NONE : get_square(parts.enpassant.c_str());
 
-    if (!half_move_clock.empty())
-        b.half_move_counter = (char)std::stoi(half_move_clock);
+    if (!parts.half_move_clock.empty())
+        b.half_move_counter = (char)std::stoi(parts.half_move_clock);
 
     return b;
+}
+
+fen::fen_parts fen::extract_fen_parts(const std::string& fen) {
+    std::istringstream ss(fen);
+    fen_parts parts;
+    getline(ss, parts.pieces, ' ');
+    getline(ss, parts.side_to_move, ' ');
+    getline(ss, parts.castling, ' ');
+    getline(ss, parts.enpassant, ' ');
+    getline(ss, parts.half_move_clock, ' ');
+    getline(ss, parts.full_move_counter, ' ');
+
+    return parts;
 }
